@@ -2,6 +2,10 @@
 
 <ul>
   <% @episodes.each do |episode| %>
-    <li><%= "Episode #{episode.number} - #{episode.date.strftime("%B %d, %Y")}"%></li>
+    <li><%= link_to "Episode #{episode.number} - #{episode.date.strftime("%B %d, %Y")}", episode%></li>
   <% end %>
+
+  <h3><%= link_to "Add Appearance", new_appearance_path %></h3>
+
+  <h3><%=  link_to "Show All Guests", guests_path%></h3>
 </ul>
