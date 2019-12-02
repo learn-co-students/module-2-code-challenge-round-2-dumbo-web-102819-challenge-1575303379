@@ -1,0 +1,11 @@
+<h1> <%= @guests.name %> </h1>
+<h3> Name: <%= @guests.name %> </h3>
+
+<ul>
+<% @guests.occupation.each do |occupation| %> 
+    <li> <%= guests.occupation %> </li>    
+<% end %>
+</ul>
+
+
+<%= link_to "Go Back!", guests_path %>
