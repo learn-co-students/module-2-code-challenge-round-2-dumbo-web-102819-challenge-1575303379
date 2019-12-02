@@ -1,0 +1,10 @@
+<h1>Details for Episode: <font color = "blue"> <%= "#{@episode.number} - #{@episode.date.strftime("%B %d, %Y")}" %></font> </h1>
+
+<p>Guest(s) on this Episode: </p>
+<ul>
+    <% @episode.guests.each do |guest| %>
+      <li>  <%= guest.name %> </li> 
+    <% end %>
+</ul>
+<br>
+<%= link_to "Back to Episode Index!", episodes_path %>

@@ -1,0 +1,13 @@
+<h1>Create a New Appearance </h1>
+
+<br>
+<p>Please use the collection select below to create a guest appearance by selecting a guest name, the episode they appeared on, and a rating from 1 - 5 ! </p>
+<%= form_for @appearance do |f| %>
+<%= f.label "Guest Name: "%>
+<%= f.collection_select :guest_id, Guest.all, :id, :name %>
+<%= f.label "Episode Number: "%>
+<%= f.collection_select :episode_id, Episode.all, :id, :number  %>
+<%= f.label "Episode Rating"%>
+<%= f.number_field :rating %>
+<%= f.submit %>
+<% end %>
