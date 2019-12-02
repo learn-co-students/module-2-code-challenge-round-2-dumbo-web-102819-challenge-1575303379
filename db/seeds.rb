@@ -25,3 +25,10 @@ date = Date.parse('2015-09-08')
   date = date.next
 end
 
+
+eg11 = EpisodeGuest.create(episode_id: 11, guest_id: 559, rating: 4)
+
+# eg2 = EpisodeGuest.create(episode_id:7 , guest_id:555 , rating: 2)
+# eg3 = EpisodeGuest.create(episode_id:2 , guest_id:555 , rating: 3)
+# eg1 = EpisodeGuest.create(episode_id:4 , guest_id:550 , rating: 2)
+# eg4 = EpisodeGuest.create(episode_id:3 , guest_id:550 , rating: 3)

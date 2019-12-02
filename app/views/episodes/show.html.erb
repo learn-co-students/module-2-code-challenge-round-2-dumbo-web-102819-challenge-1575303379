@@ -1,0 +1,6 @@
+<h1>Episode <%= @episode.number %></h1>
+
+
+<h3> <% @episode.guests.each do |guest| %></h3>
+    <%= guest.name %>
+<% end %>
