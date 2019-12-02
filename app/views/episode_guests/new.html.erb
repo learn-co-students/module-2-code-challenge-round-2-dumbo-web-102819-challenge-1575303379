@@ -1,0 +1,18 @@
+<h1> Episode Guest Rating</h1>
+
+<%= form_for @episode_guest do |f| %>
+
+    <%= f.label :guest_id %>
+    <%= f.collection_select(:guest_id, Guest.all, :id, :name) %><br>
+
+    <%= f.label :episode_id %>
+    <%= f.collection_select(:episode_id, Episode.all, :id, :number) %><br>
+
+
+    <%= f.label :rating %>
+    <%= f.number_field :rating %>
+
+    <%= f.submit %>
+
+
+    <% end %>
