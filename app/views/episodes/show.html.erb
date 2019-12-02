@@ -1,0 +1,18 @@
+<h1><%= "Episode #{@episode.number} - #{@episode.date.strftime("%B %d, %Y")}" %></h1>
+<p> <%= link_to("Back to Episodes", episodes_path) %> </p>
+<ul>
+	<% @episode.guest.each do |guest| %>
+		<li>
+			<h2><%= "#{guest.name} Rating:" %>
+				<% #TODO Fix the rating appearance, rn it's showing all the rating for the episode for each instance of the person's rating (when a person has 2 or more appearance, ended up with more than 1 rating)
+				#^ Possible fix 1, limit each instance appearance and keep track which one has been displayed and show the rating of the next one.
+				#^ Possible fix 2, limit creating appearance, so that for each guest, they can only rate the episode once, future apearance of the same guest and episode will just update the rating.
+				 guest.episode_guest.select do |appearance|
+				 	appearance.episode_id == @episode.id
+				 end.each do |appearance| %>
+				 	<%= appearance.rating %>
+				 	<% end %>
+			</h2>
+		</li>
+	<% end %>
+</ul>
