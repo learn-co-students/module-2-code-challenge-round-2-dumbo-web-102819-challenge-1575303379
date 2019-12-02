@@ -1,0 +1,10 @@
+<h1> <%= @guest.name %></h1>
+<h3><i> <%= @guest.occupation.titlecase %> </i></h3>
+<ul>
+<% if @guest.episodes %>
+    <% @guest.episodes.each do |episode| %>
+    <li><%= link_to "Episode: #{episode.number} - #{episode.nice_date}", episode %></li>
+    <% end %>
+<% end %><br>
+<%= link_to "Go Back!", guests_path%>
+</ul>
