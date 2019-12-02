@@ -1,0 +1,17 @@
+<h1>Episode #<%= @episode.number %></h1>
+<ul>
+<% @guests.each do |guest|%>
+    <li><%= link_to guest.name, guest %></li>
+<% end%>
+</ul>
+
+<br>
+<%= form_tag episodes_path, method: "GET" do %>
+    <%= submit_tag "All Episodes" %>
+<% end%>
+<%= form_tag guests_path, method: "GET" do %>
+    <%= submit_tag "All Guests" %>
+<% end%>
+<%= form_tag new_appearance_path, method: "GET" do %>
+    <%= submit_tag "New Appearance" %>
+<% end%>
