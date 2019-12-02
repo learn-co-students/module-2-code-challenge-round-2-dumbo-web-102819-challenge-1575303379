@@ -8,7 +8,8 @@ class EpisodeGuestsController < ApplicationController
   		white_list = params[:episode_guest].permit(:guest_id, :episode_id, :rating, values: 0)
 	  	@data = EpisodeGuest.new(white_list)
 
-	  	# #TODO: create the validation from the models
+	  	#TODO: create the validation from the models
+	  	#^ Check to see if rating exist
 	    if @data.valid?
 	      @data.save
 
