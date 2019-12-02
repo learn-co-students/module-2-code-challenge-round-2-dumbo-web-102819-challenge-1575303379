@@ -1,0 +1,11 @@
+<h1><%= "Episode #{@episode.number} - #{@episode.date.strftime("%B %d, %Y")}" %></h1>
+
+<h2>Guest Appearances:
+  <ul><%= @episode.guests do |ep|%>
+    <li>
+      <%= link_to ep.name, ep %>,<br>
+       Rating: <%=  ep.rating%><br>
+  </li><% end %>
+
+</ul>
+</h2>
