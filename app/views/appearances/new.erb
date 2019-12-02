@@ -1,0 +1,17 @@
+<h1>Rate an Appearance!</h1>
+
+<%= form_for @appearance do |f| %>
+    <%= f.label :episode_id %>
+    <%= f.collection_select(:episode_id, Episode.all, :id, :number) %>
+    <br>
+    <%= f.label :guest_id %>
+    <%= f.collection_select(:guest_id, Guest.all, :id, :name) %>
+    <br>
+    <%= f.label :rating %>
+    <%= f.number_field :rating %>
+    <br>
+    <%= f.submit %>
+<% end %>
+<br>
+<%= link_to "Back to Episodes", episodes_path %>
+<%= link_to "Back to Guests", guests_path %>
