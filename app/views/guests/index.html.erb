@@ -2,6 +2,10 @@
 
 <ul>
   <% @guests.each do |guest| %>
-    <li><%= guest.name %></li>
+    <li><%= link_to guest.name, guest_path(guest) %></li>
   <% end %>
 </ul>
+
+
+<%= button_to "Go to Episodes List", episodes_path, :method => "get" %>
+<%= button_to "Back to the Main Page", home_path, :method => "get" %>

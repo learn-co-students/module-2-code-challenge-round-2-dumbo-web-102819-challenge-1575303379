@@ -1,0 +1,17 @@
+<h1>OMG YOU ARE WEBMASTER AND CAN CREATE GUESTS</h1>
+
+
+<%= form_for @guest do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br>
+    <%= f.label :occupation %>
+    <%= f.text_field :occupation %>
+    <br>
+    <%= f.submit %>
+<% end %>
+
+<br>
+<%= button_to "Nevermind, Back to Guests", guests_path, :method => "get"%>
+
+<%= button_to "Nevermind, Back to the Main Page", home_path, :method => "get" %>

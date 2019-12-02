@@ -1,0 +1,12 @@
+<h1>DIRECTOR POWERS ENGAGE! </h1>
+<%= form_for @episode do |f| %>
+    <%= f.label :date %>
+    <%= f.date_field :date %>
+    <%= f.label :number %>
+    <%= f.number_field :number %>
+    <%= f.submit %>
+<% end %>
+
+
+<%= button_to "Nevermind! Back to Episodes", episodes_path, :method => "get" %>
+<%= button_to "Nevermind! Back to the Main Page", home_path, :method => "get" %>

@@ -1,0 +1,12 @@
+<h1><%= @guest.name %></h1>
+
+<h2><%= @guest.occupation %></h2>
+
+<%= button_to "Back to Guests", guests_path, :method => "get"%>
+<%= button_to "Back to the Main Page", home_path, :method => "get" %>
+<br>
+<%= button_to "DELETE", {:controller => :guests, :action => 'destroy', :id => @guest.id }, :method => :delete %>
+
+<br>
+<br>
+<%= button_to "Super Secret Edit Guest Function", edit_guest_path(@guest), :method => "get" %>

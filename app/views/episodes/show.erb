@@ -1,0 +1,19 @@
+<h1><%= "Episode #{@episode.number} - #{@episode.date.strftime("%B %d, %Y")}" %></h1>
+
+<ul>
+<% @episode.guests.each do |guest| %>
+<li>
+<%= link_to guest.name, guest_path(guest) %>
+</li>
+<% end %>
+</ul>
+
+
+
+<%= button_to "Back to Episodes", episodes_path, :method => "get" %>
+
+<%= button_to "Back to the Main Page", home_path, :method => "get" %>
+
+<%= button_to "DELETE", {:controller => :episodes, :action => 'destroy', :id => @episode.id }, :method => :delete %>
+
+<%= button_to "SUPER SECRET DIRECTOR POWER TO CHANGE INFO", edit_episode_path(@episode), :method => "get" %>
