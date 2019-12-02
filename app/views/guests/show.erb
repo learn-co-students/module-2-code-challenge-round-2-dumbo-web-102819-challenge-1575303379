@@ -1,0 +1,13 @@
+<h1> <%= @guest.name %> </h1>
+<h3> Occupation: <%= @guest.occupation %> </h3>
+
+<%= link_to "Go Back", guests_path %>
+
+<h3>Episodes</h3>
+
+<ul>
+<% @guest.episodes.each do |episode| %>
+    <li> <%= link_to "Episode #{episode.number}", episode %></li>
+<% end %>
+</ul>
+
