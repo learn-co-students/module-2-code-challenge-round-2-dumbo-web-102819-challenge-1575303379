@@ -1,0 +1,9 @@
+<h1> Episode <%= @episode.number %> </h1>
+<h3> Guests: </h3>
+<% @episode.guests.each do |guest| %>
+<ul>
+  <li><%= @guests.name %></li> 
+      <% end %> 
+</ul>
+#Getting what looks like an empty array for @guests.name
+#Need to check associations or seed data
