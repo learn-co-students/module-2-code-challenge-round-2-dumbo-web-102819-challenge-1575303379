@@ -41,3 +41,13 @@ Luckily, another developer has already started the job. We have a model for gues
 + There are probably many ways to set this up.
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/immersive-rails-assessment'>Immersive Rails Assessment</a> on Learn.co and start learning to code for free.</p>
+
+Algorithm for lab completition/finishing notes 
+
+1. Create associations [x]
+2. Create controller methods for appearances [x](Crud) and the corresponding html page for creating a new appearance through form_for. [x]
+*Not able to submit form properly to create a new appearance due to errors 
+3. Create  index and show methods for guests (cRud) and corresponding index and show html pages (guest view has a name and opccupation) [x]
+*Not able to create a working show page for guests (due to errors)
+4. Create  index and show methods for episodes (cRud) and corresponding index and show html pages (episode view has name) [x]
+*Not able to create a working show page for episodes (due to errors) 
